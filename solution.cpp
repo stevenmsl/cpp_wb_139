@@ -25,6 +25,14 @@ using namespace std;
       recursively
 
   - time complexity : O(n^2)
+    - "abc" , mem = ["a","b","c"]
+    - "abc" -> "a" + "bc" (x)
+      - "bc" is not in mem
+    - "abc" -> "ab" + "c" (OK) (n steps here already)
+    - continue breaking down "ab"
+    - "ab" -> "a" + "b" (ok)
+    - continue breaking down "a"
+    -> "a" (ok) (another n steps to break it down to "a")
 */
 
 bool Solution::wordBreak(string s, vector<string> &wordDict)
